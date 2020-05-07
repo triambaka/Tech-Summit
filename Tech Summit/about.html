@@ -1,0 +1,226 @@
+<html>
+<head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <style>
+ @import url(https://fonts.googleapis.com/css?
+family=Open+Sans:400,300,600,700,700italic,800);
+ body {
+ color: black;
+ }
+ #mqee {
+            background-color: cornflowerblue;
+            font-family: monospace;
+            font-size: xx-large;
+        }
+ .mainmenu {
+ list-style: none;
+ text-align: center;
+ border-bottom-style: solid;
+ border-bottom-color: gray;
+ }
+
+ /*.nav {
+ text-decoration: none;
+ color: black;
+ display: inline-block;
+ height: 50px;
+ width: 85px;
+ line-height: 48px;
+ text-align: center;
+ font-family: "open sans";
+ padding: 0 20px 0 20px;
+ border-radius: 4px;
+ border-bottom-right-radius: 0px;
+ border-bottom-left-radius: 0px;
+ }
+
+ .nav:hover {
+ background-color: #124a58;
+ color: white;
+ }
+
+ .nav.current {
+ background-color: #124a58;
+ color: white;
+ }*/
+
+ .row {
+ display: none;
+ }
+
+ .title {
+ background-image: linear-gradient(#124a58, black);
+ padding: 100px;
+ color: white;
+ border-radius: 20px;
+ width: 80%;
+ margin-left: 10%;
+ }
+
+ h1 {
+ color: white;
+ font-family: open sans;
+ font-size: 50px;
+ }
+
+.para{
+    /*margin-left: 20px;*/
+    background-color: whitesmoke;
+    border: wheat;
+    text-align: left;
+    font-size: 20px;
+    font-family: "open sans";
+}
+body{
+    background-image: url("tech1.jpg");
+}
+ .card {
+ background-color: gray;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ padding: 16px;
+ text-align: left;
+ width:70%;
+margin-left: 15%;
+ border-radius: 15px;
+ font-size: 20px;
+    font-family: "open sans";
+    color: white;
+    transition: transform ease-in-out 0.3s;
+ }
+ .card:hover{
+   transform: scale(1.2);
+ }
+
+
+ .title2 {
+ color: grey;
+ font-size: 18px;
+ }
+
+ img {
+ border-radius: 15px 25px;
+ max-width: 16%;
+ height: auto;
+ float:left;
+ /*transition: transform ease-in-out 0.3s;
+ }
+
+ img:hover{
+   transform: scale(2.0);*/
+ }
+
+ .login_btn {
+ position: absolute;
+ top: 20px;
+ right: 10px;
+ text-decoration: none;
+ color: #124a58;
+ }
+
+ .login_btn:hover {
+ color: cornflowerblue
+ }
+ </style>
+
+ <style>
+  /* body{
+     background-image: url('{%static "technothalon/images/tech1.jpg"%}');
+   }*/
+ .footer {
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ background-color: gray;
+ color: white;
+ text-align: left;
+ font-size: small;
+ }
+ </style>
+ <script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+></script>
+ <script>
+ $(document).ready(function() {
+ $('div.row').fadeIn(3000).removeClass('row');
+ });
+ </script>
+     
+</head>
+<body>
+ <!--<header>
+ <div class="mainmenu">
+ <a class="nav">HOME</a>
+ <a class="nav">FAQ</a>
+ <a class=" current nav">ABOUT</a>
+ <a class="nav">REGISTER</a>
+ <a class="login_btn" href="login.html">LOGIN</a>
+ </div>
+ </header>-->
+ <nav class="navbar navbar-inverse">
+   <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="home.html">TECH SUMMIT 2K20</a>
+      </div>
+      <ul class="nav navbar-nav">
+          <li><a href="home.html">HOME</a></li>
+          <li class="active"><a href="about.html">ABOUT</a></li>
+      </ul>
+
+       <ul class="nav navbar-nav navbar-right">
+         <li><a href="registration.html"><span class="glyphicon glyphicon-user"></span>REGISTER</a></li>
+     </ul>
+   </div>
+</nav><br><br>
+ <div class="title">
+ <h1 style="text-align: center">ABOUT US</h1>
+ <p style="color:white ; opacity: 0.8;font-size:20px">The 20th edition of THE TECH SUMMIT CONFERENCE, the most-awaited Tech event all over the world
+ is going to be held between 31st August and 2rd September. Known among the youth to have some of the best speakers around the world, this event is probably
+ one of a kind because of the spectrum of tech related topics covered by the speakers. </p>
+ </div>
+ <div>
+ <div class="row">
+ <table cellspacing="30px" cellpadding="50px">
+    <br><br><br><br>
+ <!--<tr >
+ <div class="card">
+ <!--<img src="C:\Users\K
+Jaganathan\Pictures\Screenshots\Screenshot (62).png"
+style="width:100%">
+
+ <h3 style="color:white"></h3>
+ <p style="opacity:0.6">About the Tech Summit Conference:</p><br>
+ <img src='{%static "technothalon/images/tech.jpg"%}' style="width:10%" class="zoomA">&nbsp&nbsp&nbsp
+ Are you the good problem-solver who is just really bored of the regular events? If yes, then this event is for you!<br>&nbsp;&nbsp;&nbsp; This event is a 24hr challenge with
+multiple tasks. You will be given a number of tasks to solve. The successful <br>&nbsp;&nbsp;&nbsp; completion of one level will automatically open the next round for you. The levels could be anything from simple output related questions to complex real-life problems. <br><br>So, what are you waiting for? Put your thinking caps on for the most anticipated tech event of the year!  <a href="{% url 'registration' %}">Register here!</a>Hurry!Slots are limited!
+<br> Have more questions? Don't worry! We've got you covered.<a href="{% url 'faq' %}"> Click here</a> to check out some of the common questions asked<br><br><br>
+ </div>
+ </tr><br><br><br>-->
+ <tr>
+    <div class="card">
+        <p style="opacity:0.6">About the Tech Summit Conference:</p><br>
+        <img src='logo.png' style="width:10%" class="zoomA">&nbsp;&nbsp;&nbsp;
+        The tech summit conference was first held in the year 2000 with just about a 100 techies and 2 speakers. Over<br>&nbsp;&nbsp;&nbsp; the years, this summit gained a lot of popularity and attracted the attention of various famous speakers. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;In the recent past, this summit was also responsible for ensuring that the innovative technological ideas that could bring about a change in the industry had no challenges while marketing their product<br>
+        Apart from that, the summit also ensures that it provides a platform for the next generation techies to understand the global technological trends.<br><br><br>
+    </div>
+ </tr>
+ </table>
+ <a class="btn btn-info"href="registrion.html">Register Now!</a>
+ </div>
+ </div>
+ <br>
+ <br>
+ <div class="footer">
+ <p>
+ <p>Contact information:</p>
+ <p> <a href="mailto:someone@example.com">
+ someone@example.com</a>.</p>
+ <p>Call: +91 7685849296, +91 8474878389</p>
+ </p>
+ </div>
+</body>
+</html>
